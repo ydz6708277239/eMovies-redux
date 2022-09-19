@@ -7,10 +7,17 @@ First, let's go over several Points of Interest (POI) in the CDM changes/updates
 
 - Payment methods are now classified into either CC or ePayment to normalize logical model.
 
-![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_customer-rentals.png?raw=true)
+![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_payments.png?raw=true)
 
 - Customers can now opt into rental tiers (default is "Basic") to receive rewards benefits. In addition, each movie rental purchase is now associated with CDN for online rentals and delivery providers for warehouse purchases. This information will be useful in gauging the transition from brick-and-mortar to completely online viewing trends.
 
+![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_customer-rentals.png?raw=true)
+
 - Brick-and-mortar stores have been repurposed into warehouses, where fulfillment robots will now perform fulfillment duties alongside human workers.
 
+![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_logistics.png?raw=true)
+
 - To confidently assess viewing demographics and trends for the future, the movies schema has been vastly expanded, with new tables for actors, genres, languages, directors. 
+
+![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_movies.png?raw=true)
+
