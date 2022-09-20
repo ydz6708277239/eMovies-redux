@@ -21,3 +21,11 @@ First, let's go over several Points of Interest (POI) in the CDM changes/updates
 
 ![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_movies.png?raw=true)
 
+Next, let's have a closer look at additions and updates to the logical model:
+
+- In the customer-related schema, the new tier entity is described by a surrogate key, description, and foreign keys to the DeliveryProvider and CDNProvider tables. Just as well, payments are now subtyped from the parent Payments entity.
+
+- In the Movie portion of the schema, a link table has been added for the expected M:M relationship between the Movies and Star entities, to assist with queries for such data. New Genre entity has been added as well.
+
+- The Robot entity has been added to the Employee schema, with each instance being described by start date and warehouse ID.
+
