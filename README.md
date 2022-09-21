@@ -9,7 +9,7 @@ First, let's go over several Points of Interest (POI) in the CDM changes/updates
 
 ![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_payments.png?raw=true)
 
-- Customers can now opt into rental tiers (default is "Basic") to receive rewards benefits. In addition, each movie rental purchase is now associated with CDN for online rentals and delivery providers for warehouse purchases. This information will be useful in gauging the transition from brick-and-mortar to completely online viewing trends.
+- Customers can now opt into rental tiers (default is "Basic") to receive rewards benefits (such as faster delivery and more robust content servers). In addition, each movie rental purchase is now associated with CDN for online rentals and delivery providers for warehouse purchases. This information will be useful in gauging the transition from brick-and-mortar to completely online viewing trends.
 
 ![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_customer-rentals.png?raw=true)
 
@@ -23,7 +23,7 @@ First, let's go over several Points of Interest (POI) in the CDM changes/updates
 
 Next, let's have a closer look at additions and updates to the logical model:
 
-- In the customer-related schema, the new tier entity is described by a surrogate key, description, and foreign keys to the DeliveryProvider and CDNProvider tables. Just as well, payments are now subtyped from the parent Payments entity.
+- In the customer-related schema, there is now a prominent Tier entity with non-identifying relationships to the Customer, DeliveryProvider, and CDNProvider tables. Just as well, customer payments are now normalized with subtyping of different Payment types.
 
 - In the Movie portion of the schema, a link table has been added for the expected M:M relationship between the Movies and Star entities, to assist with queries for such data. New Genre entity has been added as well.
 
