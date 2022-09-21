@@ -29,3 +29,13 @@ Next, let's have a closer look at additions and updates to the logical model:
 
 - The Robot entity has been added to the Employee schema, with each instance being described by start date and warehouse ID.
 
+And lastly, we'll dig into the changes to the physical data model.
+
+- Another optimization involved lookup tables to reduce storage requirements for certain columns that previously had varchar datatypes: some examples were Robot.Condition, MovieCopy.Format, MovieCopy.Condition, MovieRentalRecord.RentalStatus, MovieRentalRecord, Star.StarNationality, etc. Replacing this attribute with an int will greatly speed lookup and centralize additions and deletions of lookup datatypes. Non-varchar columns, notably address-related columns in Customer, Employee, and Warehouse tables, also now reference lookup tables as well.
+
+- Columns pertaining to financial information were replaced with money datatypes to better deal with potential precision issues.
+
+- In the Movie table, Rating is now numeric and MovieClip is now a varchar(4000) of its associated Youtube trailer (should one exist).
+
+More changes to come in the pipeline. 
+Thank you for your time.
