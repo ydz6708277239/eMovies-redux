@@ -17,17 +17,19 @@ First, let's go over several Points of Interest (POI) in the CDM changes/updates
 
 ![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_logistics.png?raw=true)
 
-- To confidently assess viewing demographics and trends for the future, the movies schema has been vastly expanded, with new tables for actors, genres, languages, directors. 
+- To confidently assess viewing demographics and trends for the future, we've expanded our Movies aspect of the data model to include Stars (actors and directors), Nationality, and Genres . 
 
 ![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_movies.png?raw=true)
 
 Next, let's have a closer look at additions and updates to the logical model:
 
-- In the customer-related schema, there is now a prominent Tier entity with non-identifying relationships to the Customer, DeliveryProvider, and CDNProvider tables. Just as well, customer payments are now normalized with subtyping of different Payment types.
+- In the customer-related schema, there is now a prominent Tier entity with non-identifying relationships to the Customer, DeliveryProvider, and CDNProvider tables. 
 
-- In the Movie portion of the schema, a link table has been added for the expected M:M relationship between the Movies and Star entities, to assist with queries for such data. New Genre entity has been added as well.
+- Payment entity has been normalized with the introduction of CCPayment and EPayment subtypes.
 
-- The Robot entity has been added to the Employee schema, with each instance being described by start date and warehouse ID.
+- Turning to Movies, I've included new Star, Nationality, and Genre entities and have settled on a many-many cardinality that will best serve the Movie-Star and Movie-Genre relationships, to better assist with eventual queries for film-related data.
+
+- Speaking of robots, as warehouse robots now work alongside humans in warehouses, they are represented via a Robot entity class in the Employee portion of the schema.
 
 And lastly, we'll dig into the changes to the physical data model.
 
@@ -36,6 +38,8 @@ And lastly, we'll dig into the changes to the physical data model.
 - Columns pertaining to financial information were replaced with money datatypes to better deal with potential precision issues.
 
 - In the Movie table, Rating is now numeric and MovieClip is now a varchar(4000) of its associated Youtube trailer (should one exist).
+
+- Link tables galore: link tables have been added to make tangible the many-many relationship between the Movies-Star and Movies-Genre tables, to assist with queries for such data. We anticipate the addition of more link tables as data engineers mine our data for more viewer insights. 
 
 More changes to come in the pipeline. 
 Thank you for your time.
