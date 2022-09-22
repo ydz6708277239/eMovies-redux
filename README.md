@@ -19,7 +19,7 @@ First, let's go over several Points of Interest (POI) in the CDM changes/updates
 
 - To confidently assess viewing demographics and trends for the future, we've expanded our Movies aspect of the data model to include Stars (actors and directors), Nationality, and Genres . 
 
-![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_movies.png?raw=true)
+![alt text](https://github.com/wuda20/eMovies-redux/blob/main/images/CDM_movies.png?raw=true)
 
 Next, let's have a closer look at additions and updates to the logical model:
 
