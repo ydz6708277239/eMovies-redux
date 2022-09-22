@@ -7,7 +7,7 @@ First, let's go over several Points of Interest (POI) in the CDM changes/updates
 
 - Payment methods are now classified into either CC or ePayment to normalize logical model.
 
-![alt text](https://github.com/wuda20/eMovies-redux/blob/emovies-dev/images/POI_payments.png?raw=true)
+![alt text](https://github.com/wuda20/eMovies-redux/blob/main/images/CDM_payments.png?raw=true)
 
 - Customers can now opt into rental tiers (default is "Basic") to receive rewards benefits (such as faster delivery and more robust content servers). In addition, each movie rental purchase is now associated with CDN for online rentals and delivery providers for warehouse purchases. This information will be useful in gauging the transition from brick-and-mortar to completely online viewing trends.
 
@@ -33,7 +33,7 @@ Next, let's have a closer look at additions and updates to the logical model:
 
 - Turning to Movies, I've included new Star, Nationality, and Genre entities and have settled on a many-many cardinality that will best serve the Movie-Star and Movie-Genre relationships, to better assist with eventual queries for film-related data.
 
-![alt text](https://github.com/wuda20/eMovies-redux/blob/main/images/LDM_movies.png.png?raw=true)
+![alt text](https://github.com/wuda20/eMovies-redux/blob/main/images/LDM_movies.png?raw=true)
 
 - Speaking of robots, as warehouse robots now work alongside humans in warehouses, they are represented via a Robot entity class in the Employee portion of the schema.
 
